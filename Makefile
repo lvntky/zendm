@@ -6,7 +6,7 @@ CC := gcc
 CFLAGS := -Wall -Wextra -pedantic -std=c99 -O2 -Iinclude
 
 # ncurses library
-LIBS := -lncurses
+LIBS := -lncurses -lform
 
 # Directories
 SRC_DIR := src
@@ -22,7 +22,7 @@ OBJS := $(patsubst $(SRC_DIR)/%.c,$(OBJ_DIR)/%.o,$(SRCS))
 OUTPUT := $(BIN_DIR)/$(PROJECT_NAME)
 
 # Phony targets
-.PHONY: all clean install uninstall dist distclean
+.PHONY: all clean install uninstall dist distclean valgrind
 
 # Default target
 all: $(OUTPUT)
@@ -43,6 +43,10 @@ $(BIN_DIR) $(OBJ_DIR):
 # Run binary
 run: $(OUTPUT)
 	./bin/zendm
+
+# Run binary with Valgrind
+valgrind: $(OUTPUT)
+	valgrind --leak-check=full --show-leak-kinds=all ./bin/zendm
 
 # Clean build artifacts
 clean:
@@ -76,4 +80,3 @@ distclean: clean
 # Generate dependency files
 $(OBJ_DIR)/%.d: $(SRC_DIR)/%.c | $(OBJ_DIR)
 	@$(CC) $(CFLAGS) -MM -MT $(@:.d=.o) $< > $@
-
