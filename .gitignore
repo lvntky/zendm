@@ -45,7 +45,6 @@ $(PROJECT_NAME)
 *.sublime-workspace
 
 # Generated documentation
-/docs/
 /*.html
 
 # Logs and databases
