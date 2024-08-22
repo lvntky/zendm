@@ -3,6 +3,8 @@
 
 
 [![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
+[![Codacy Badge](https://app.codacy.com/project/badge/Grade/a96a6dce780944a4ae5cb7a6166efaae)](https://app.codacy.com/gh/lvntky/zendm/dashboard?utm_source=gh&utm_medium=referral&utm_content=&utm_campaign=Badge_grade)
+
 # zendm
 
 **zendm** is a lightweight, custom display manager for Linux built using `ncurses`. It aims to provide a simple and efficient way to manage user sessions from the terminal, with a focus on minimalism and configurability.
