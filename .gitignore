@@ -1,0 +1,69 @@
+# Binary and object files
+/bin/
+/obj/
+/*.o
+/*.out
+
+# Build directories
+/build/
+/dist/
+
+# Dependency files
+*.d
+
+# Temporary files
+*.tmp
+*.log
+*.swp
+*.swo
+*.bak
+
+# System files
+.DS_Store
+Thumbs.db
+
+# CMake build files (if used)
+CMakeLists.txt.user
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# Executables
+$(PROJECT_NAME)
+
+# Archive files
+*.tar.gz
+*.zip
+*.7z
+*.rar
+
+# Editor directories and files
+.vscode/
+.idea/
+*.iml
+*.sublime-project
+*.sublime-workspace
+
+# Generated documentation
+/docs/
+/*.html
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# OS-specific files
+*.swp
+*.swo
+*~
+
+# Python virtual environment (if used)
+venv/
+__pycache__/
+*.pyc
+
+# Specific to Linux
+*.pid
+*.pid.lock
