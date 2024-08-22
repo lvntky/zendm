@@ -26,3 +26,7 @@ void draw_sample() {
   delwin(win);
   endwin();
 }
+
+void set_screen_dimension(WINDOW *stdscr, int *y, int *x) {
+  getmaxyx(stdscr, *y, *x);
+}
